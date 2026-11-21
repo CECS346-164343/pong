@@ -1,0 +1,107 @@
+:root {
+  color-scheme: dark;
+  font-family: "Courier New", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: #080b12;
+  color: #f4f7fb;
+}
+
+.game-shell {
+  width: min(94vw, 960px);
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  letter-spacing: 0.22em;
+  text-indent: 0.22em;
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.25);
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: clamp(18px, 5vw, 54px);
+  margin-bottom: 10px;
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.score-divider {
+  color: #667085;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 3px solid #f4f7fb;
+  border-radius: 4px;
+  background: #0d111a;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.55);
+  cursor: crosshair;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+button {
+  min-width: 92px;
+  border: 2px solid #f4f7fb;
+  border-radius: 4px;
+  padding: 9px 14px;
+  background: transparent;
+  color: #f4f7fb;
+  font: 700 1rem "Courier New", monospace;
+  cursor: pointer;
+  transition: background 120ms, color 120ms, opacity 120ms;
+}
+
+button:hover:not(:disabled),
+button:focus-visible {
+  background: #f4f7fb;
+  color: #080b12;
+  outline: none;
+}
+
+button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.instructions {
+  margin: 12px 0 0;
+  color: #9da7b7;
+  font-size: 0.9rem;
+}
+
+@media (max-height: 720px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .scoreboard {
+    font-size: 1.8rem;
+  }
+
+  .instructions {
+    display: none;
+  }
+}
