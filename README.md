@@ -1,2 +1,2 @@
 # pong
-pong game to practice UI/UX
+simple pong game to practice UI/UX
